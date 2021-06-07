@@ -1,0 +1,96 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                EMPRESA PRUEBA S.A. DE C.V.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p>
+                ACTA DE ASAMBLEA GENERAL
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+              <p>
+                La Asociación Empresa Prueba S.A. de C.V. con domicilio ubicado en 58240, Morelia, Michoacán y siendo el 27 de mayo de 2021 a las 07:51,
+                reúne a sus asociados en Asamblea General Ordinaria en primera convocatoria, con la siguiente,
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <b><p>
+                COMPOSICIÓN DE LA MESA
+              </p></b>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p>
+                Conforme a las disposiciones legales y estatutarias actúa Arturo Vázquez Quintana como Presidente de la Asociación y Jorge Ayala Robles como
+                Secretario de la Asociación. <br>
+                La Asamblea General se reúne con los siguientes,
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <b><p>
+                SOCIOS ASISTENTES
+              </p></b>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p>
+                Asisten a la Asamblea General Ordinaria un total de {{ count_socios }} socios, de los cuales todos se encuentran presentes. Los socios asistentes representan el {{part_socios}} del total de socios de la
+                asociación de acuerdo con la relación actualizada de socios. <br>
+                De acuerdo con la convocatoria efectuada, la Asamblea General {{assembly.ordinary}} tiene como,
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <b><p>
+                ORDEN DEL DÍA
+              </p></b>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              {{ assembly.day_order }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <b><p>
+                DELIBERACIONES Y ACUERDOS
+              </p></b>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12" *ngFor="let agreement of assembly.agreements">
+              <div class="row">
+                <div class="col-12">
+                  {{ agreement.agreement }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>

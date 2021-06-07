@@ -1,0 +1,58 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-8">
+              <h4 class="card-title"> {{ assoc_name }}</h4>
+            </div>
+            <div class="offset-1 col-3">
+              <button class="btn btn-primary" (click)="goToCreateAssembly()">
+                Comenzar proceso
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Folio
+                </th>
+                <th>
+                  Fecha
+                </th>
+                <th>
+                  Hora
+                </th>
+                <th>
+                  Típo
+                </th>
+              </thead>
+              <tbody>
+                <tr (click)="goToAssembly(assembly._id)" *ngFor="let assembly of assoc_assemblies" role="button">
+                  <td>
+                    {{ assembly._id }}
+                  </td>
+                  <td>
+                    {{ assembly.date }}
+                  </td>
+                  <td>
+                    {{ assembly.time }}
+                  </td>
+                  <td>
+                    {{ isOrdinary(assembly.ordinary) }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

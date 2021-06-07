@@ -1,0 +1,66 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Acta de asamblea</h5>
+        </div>
+        <div class="card-body">
+          <form action="" *ngIf="!loading" [formGroup]="nestedForm">
+            <div class="row">
+              <div class="col-3">
+                <div class="form-group">
+                  <label>Fecha</label>
+                  <input type="text"
+                    formControlName="date"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-group">
+                  <label>Hora</label>
+                  <input type="text"
+                    formControlName="time"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="offset-3 col-3 form-check">
+                <label class="form-check-label">
+                  ¿La asamblea es ordinaria?
+                  <input
+                    class="form-check-input"
+                    formControlName="ordinary"
+                    type="checkbox"
+                    checked
+                  >
+                  <span class="form-check-sign"></span>
+                </label>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-12">
+                <label>Orden del día</label>
+                <textarea
+                  class="form-control"
+                  formControlName="day_order"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="offset-10 col-1">
+                <button type="button" class="btn btn-info" (click)="save()">
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

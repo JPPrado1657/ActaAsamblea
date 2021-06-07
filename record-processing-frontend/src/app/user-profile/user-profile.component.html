@@ -1,0 +1,42 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row" *ngIf="!loading">
+    <div class="offset-4 col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="author">
+            <a href="#">
+              <h5 class="title text-center">{{ assoc?.name.assoc_name + " " + assoc?.name.assoc_type }}</h5>
+            </a>
+            <p class="description text-center">
+              {{ "Presidente: " + assoc?.chair.first_name + " " + assoc?.chair.patternal_surname + " " + assoc?.chair.matternal_surname }}
+            </p>
+            <p class="description text-center">
+              {{ "Secretario: " + assoc?.secretary.first_name + " " + assoc?.secretary.patternal_surname + " " + assoc?.secretary.matternal_surname }}
+            </p>
+          </div>
+          <p class="description text-center">
+            Dirección:
+            <br> {{ assoc?.address.zip }}
+            <br> {{ assoc?.address.state }}
+            <br> {{ assoc?.address.city }}
+          </p>
+        </div>
+        <hr>
+        <div class="button-container">
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-google-plus-g"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="offset-4"></div>
+  </div>
+</div>
